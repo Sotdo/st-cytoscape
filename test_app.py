@@ -57,7 +57,7 @@ col1, col2 = st.columns([1, 3])
 with col1:
     layout_name = st.selectbox(
         "Layout Algorithm",
-        ["fcose", "klay", "circle", "grid", "breadthfirst"],
+        ["fcose", "klay", "dagre", "circle", "grid", "breadthfirst"],
         index=0,
     )
     
