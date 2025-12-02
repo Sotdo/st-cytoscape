@@ -5,10 +5,13 @@ import {
 // @ts-ignore
 import cytoscape from 'cytoscape';
 // @ts-ignore
+import dagre from 'cytoscape-dagre';
+// @ts-ignore
 import fcose from 'cytoscape-fcose';
 // @ts-ignore
 import klay from 'cytoscape-klay';
 
+cytoscape.use(dagre);
 cytoscape.use(fcose);
 cytoscape.use(klay);
 
