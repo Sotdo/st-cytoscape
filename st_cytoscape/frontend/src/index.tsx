@@ -52,7 +52,6 @@ function onRender(event: Event): void {
       }, {
         selector: "node",
         style: {
-          color: data.theme?.textColor,
           fontFamily: data.theme?.font
         }
       }, {
@@ -68,7 +67,7 @@ function onRender(event: Event): void {
     let cy = cytoscape({
       container: div,
       elements: data.args["elements"],
-      style: data.args["stylesheet"].concat(nodeColor),
+      style: nodeColor.concat(data.args["stylesheet"]),
       layout: data.args["layout"],
       selectionType: data.args["selectionType"],
       userZoomingEnabled: data.args["userZoomingEnabled"],
