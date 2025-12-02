@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "st-cytoscape"
+version = "0.0.5"
+description = "A Streamlit component to display a Cytoscape.js graph"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Sotdo"}
+]
+keywords = ["streamlit", "cytoscape", "graph", "network", "visualization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Streamlit",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "streamlit>=1.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/Sotdo/st-cytoscape"
+Repository = "https://github.com/Sotdo/st-cytoscape"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["st_cytoscape*"]
+
+[tool.setuptools.package-data]
+"st_cytoscape" = ["frontend/build/**/*"]
